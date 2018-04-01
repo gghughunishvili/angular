@@ -39,6 +39,10 @@
     <button (click)="greeting='Greeting 2 clicked'">Greeting 2</button>
     <p>{{ greeting }}</p>
   </div>
+  <div>
+    <input #customInput type="text">
+    <button (click)="logMessage(customInput.value)">Log</button>
+  </div>
 </div>
 
 

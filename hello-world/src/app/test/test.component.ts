@@ -43,4 +43,8 @@ export class TestComponent implements OnInit {
     this.greeting = "Greeting btn has been clicked!";
   }
 
+  logMessage = (message) => {
+    console.log(message);
+  }
+
 }
