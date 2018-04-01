@@ -17,5 +17,15 @@
     <ng-template #otherElseBlock>
       Secret is still hidden!
     </ng-template>
+
+    <h4>NG Switch statements</h4>
+    <p>Write supported colors only: red, blue and green</p>
+    <input type="text" #myInput> <button (click)="submitColor(myInput.value)">Submit Color</button>
+    <div [ngSwitch]="color">
+      <div *ngSwitchCase="'red'">You've picked red color</div>
+      <div *ngSwitchCase="'green'">You've picked green color</div>
+      <div *ngSwitchCase="'blue'">You've picked blue color</div>
+      <div *ngSwitchDefault>You've picked a wrong color buddy, try again</div>
+    </div>
   </div>
   <hr>

@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class DirectivesComponent implements OnInit {
   
   public displaySecret = false;
+  public color;
 
   constructor() { }
 
@@ -15,6 +16,10 @@ export class DirectivesComponent implements OnInit {
 
   revealSecret = () => {
     this.displaySecret = !this.displaySecret;
+  }
+
+  submitColor = (color) => {
+    this.color = color.toLowerCase();
   }
 
 }
