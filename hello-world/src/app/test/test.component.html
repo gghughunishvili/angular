@@ -43,6 +43,10 @@
     <input #customInput type="text">
     <button (click)="logMessage(customInput.value)">Log</button>
   </div>
+  <div>
+    <h3>Two way binding</h3>
+    <input [(ngModel)]="name" type="text"> {{name}}
+  </div>
 </div>
 
 
