@@ -23,7 +23,9 @@ export class TestComponent implements OnInit {
     fontWeight: "bold",
     color: "blue"
   };
-
+  
+  public greeting = "";
+  
   public siteUrl = window.location.href;
   
   constructor() { }
@@ -33,6 +35,12 @@ export class TestComponent implements OnInit {
 
   greetUser = () => {
     return "Hello " + this.name;
+  }
+
+  onBtnClick = (event) => {
+    alert("Hello there");
+    console.log(event);
+    this.greeting = "Greeting btn has been clicked!";
   }
 
 }

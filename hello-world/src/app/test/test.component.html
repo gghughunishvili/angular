@@ -33,6 +33,12 @@
     <p [style.color]="highlightColor">Style binding 2</p>
     <p [ngStyle]="messageStyles">Style binding 3</p>
   </div>
+  <h2>Working with events</h2>
+  <div>
+    <button (click)="onBtnClick($event)">Greeting</button>
+    <button (click)="greeting='Greeting 2 clicked'">Greeting 2</button>
+    <p>{{ greeting }}</p>
+  </div>
 </div>
 
 
