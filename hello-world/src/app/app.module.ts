@@ -9,6 +9,9 @@ import { TestClassComponent } from './test-class/test-class.component';
 import { TestHyphenComponent } from './test-hyphen/test-hyphen.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
+import { EmployeeService } from './employee.service';
 
 
 @NgModule({
@@ -18,13 +21,15 @@ import { PipesComponent } from './pipes/pipes.component';
     TestClassComponent,
     TestHyphenComponent,
     DirectivesComponent,
-    PipesComponent
+    PipesComponent,
+    EmployeeListComponent,
+    EmployeeDetailComponent
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
