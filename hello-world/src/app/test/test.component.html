@@ -18,5 +18,17 @@
 <input type="text" id="{{myId}}" bind-value="name">
 <input type="text" [id]="myId" [disabled]="isDisabled" [value]="name">
 
+<div>
+  <h2>Working with css classes</h2>
+  <div>
+    <p [class.text-error]="hasError">
+      This text might be with errors
+    </p>
+    <p [ngClass]="messageClasses">
+      This text is binded with angular special chars
+    </p>
+  </div>
+</div>
+
 
 <hr>

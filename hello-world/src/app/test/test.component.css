@@ -1,3 +1,15 @@
 h3 {
     color: #123456;
 }
+
+.text-success {
+    color: green;
+}
+
+.text-error {
+    color: red;
+}
+
+.text-special {
+    font-weight: bold;
+}
