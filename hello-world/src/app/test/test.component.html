@@ -5,7 +5,7 @@
 </h3>
 
 <p>
-  Test component description goes here!
+  In test component: {{description}}
 </p>
 <p>
   Site URL: {{ siteUrl }}
@@ -45,5 +45,8 @@
   <div>
     <h3>Two way binding</h3>
     <input [(ngModel)]="name" type="text"> {{name}}
+  </div>
+  <div>
+    <button (click)="fireEvent()">Send event to parent component</button>
   </div>
 </div>

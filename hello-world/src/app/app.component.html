@@ -3,8 +3,9 @@
   <h1>
     Welcome to {{ title }}!
   </h1>
+  <h3>{{message}}</h3>
   <hr>
-  <app-test></app-test>
+  <app-test (childEvent)="message=$event" [parentData]="description"></app-test>
   <hr>
   <div class="app-test-class"></div>
   <hr>
