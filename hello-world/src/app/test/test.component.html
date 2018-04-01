@@ -28,6 +28,11 @@
       This text is binded with angular special chars
     </p>
   </div>
+  <div>
+    <p [style.color]="hasError ? 'orange' : 'teal'">Style binding</p>
+    <p [style.color]="highlightColor">Style binding 2</p>
+    <p [ngStyle]="messageStyles">Style binding 3</p>
+  </div>
 </div>
 
 
