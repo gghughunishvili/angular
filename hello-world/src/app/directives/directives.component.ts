@@ -9,6 +9,7 @@ export class DirectivesComponent implements OnInit {
   
   public displaySecret = false;
   public color;
+  public names = ["Jason", "David", "Jenny", "Jane", "Kate", "Tom"];
 
   constructor() { }
 

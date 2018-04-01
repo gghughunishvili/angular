@@ -27,5 +27,10 @@
       <div *ngSwitchCase="'blue'">You've picked blue color</div>
       <div *ngSwitchDefault>You've picked a wrong color buddy, try again</div>
     </div>
+
+    <h4>NG for statements</h4>
+    <ul *ngFor="let name of names; index as i; even as e; odd as o; first as f; last as l">
+      <li id="{{i+1}}">First:{{f}} Last:{{l}} Even:{{e}} Odd:{{o}} <strong>Name:{{name}}</strong></li>
+    </ul>
   </div>
   <hr>
