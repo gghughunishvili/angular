@@ -14,4 +14,9 @@
 <div>
   {{ greetUser() }}
 </div>
+
+<input type="text" id="{{myId}}" bind-value="name">
+<input type="text" [id]="myId" [disabled]="isDisabled" [value]="name">
+
+
 <hr>

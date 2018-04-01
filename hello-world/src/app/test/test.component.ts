@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestComponent implements OnInit {
   public name = "Giorgi";
+  public myId = "testID";
+  public isDisabled = true;
 
   public siteUrl = window.location.href;
   
