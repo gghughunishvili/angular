@@ -27,8 +27,6 @@ export class TestComponent implements OnInit {
   public greeting = "";
   
   public siteUrl = window.location.href;
-
-  public displaySecret = false;
   
   constructor() { }
 
@@ -47,10 +45,6 @@ export class TestComponent implements OnInit {
 
   logMessage = (message) => {
     console.log(message);
-  }
-
-  revealSecret = () => {
-    this.displaySecret = !this.displaySecret;
   }
 
 }

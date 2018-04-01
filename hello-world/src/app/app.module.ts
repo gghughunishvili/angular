@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
 import { TestClassComponent } from './test-class/test-class.component';
 import { TestHyphenComponent } from './test-hyphen/test-hyphen.component';
+import { DirectivesComponent } from './directives/directives.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { TestHyphenComponent } from './test-hyphen/test-hyphen.component';
     AppComponent,
     TestComponent,
     TestClassComponent,
-    TestHyphenComponent
+    TestHyphenComponent,
+    DirectivesComponent
   ],
   imports: [
     BrowserModule,

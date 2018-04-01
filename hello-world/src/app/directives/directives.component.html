@@ -1,0 +1,21 @@
+<div>
+    <h2>Angular Directives</h2>
+    <h4>NG If statements</h4>
+    <button (click)="revealSecret()">{{displaySecret ? 'Hide' : 'Reveal'}} Secret</button>
+    <p *ngIf="displaySecret; else elseTemplate">
+      The secret info
+    </p>
+    <ng-template #elseTemplate>
+      <p>
+        Secret is hidden!
+      </p>
+    </ng-template>
+    <div *ngIf="displaySecret; then thenBlock; else otherElseBlock"></div>
+    <ng-template #thenBlock>
+      Yet another secret!
+    </ng-template>
+    <ng-template #otherElseBlock>
+      Secret is still hidden!
+    </ng-template>
+  </div>
+  <hr>

@@ -1,4 +1,3 @@
-<hr>
 <h3>
   Test component!
   <br>
@@ -48,25 +47,3 @@
     <input [(ngModel)]="name" type="text"> {{name}}
   </div>
 </div>
-<div>
-  <h2>Angular Directives</h2>
-  <button (click)="revealSecret()">{{displaySecret ? 'Hide' : 'Reveal'}} Secret</button>
-  <p *ngIf="displaySecret; else elseTemplate">
-    The secret info
-  </p>
-  <ng-template #elseTemplate>
-    <p>
-      Secret is hidden!
-    </p>
-  </ng-template>
-  <div *ngIf="displaySecret; then thenBlock; else otherElseBlock"></div>
-  <ng-template #thenBlock>
-    Yet another secret!
-  </ng-template>
-  <ng-template #otherElseBlock>
-    Secret is still hidden!
-  </ng-template>
-</div>
-
-
-<hr>
