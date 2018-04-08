@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-department-list',
@@ -7,14 +8,18 @@ import { Component, OnInit } from '@angular/core';
       <h4 class="text-center">
         Departments List!
       </h4>
-      <ul>
-        <li *ngFor="let dep of departments">
-          <span class="badge">{{ dep.id }}</span> {{ dep.name }}
+      <ul class="list-group">
+        <li (click)="onSelect(dep)" *ngFor="let dep of departments" class="list-group-item list-group-item-action hand">
+          <span class="badge badge-info">{{ dep.id }}</span> {{ dep.name }}
         </li>
       </ul>
     </div>
   `,
-  styles: []
+  styles: [`
+    .hand {
+      cursor: pointer;
+    }
+  `]
 })
 export class DepartmentListComponent implements OnInit {
 
@@ -25,9 +30,13 @@ export class DepartmentListComponent implements OnInit {
     {"id": 4, "name": "jQuery"},
   ];
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  onSelect(dep) {
+    this.router.navigate(['/departments', dep.id]);
   }
 
 }
