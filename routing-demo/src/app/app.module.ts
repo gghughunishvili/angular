@@ -6,6 +6,8 @@ import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { DepartmentDetailComponent } from './department-detail/department-detail.component';
+import { DepartmentContactComponent } from './department-contact/department-contact.component';
+import { DepartmentOverviewComponent } from './department-overview/department-overview.component';
 
 
 @NgModule({
@@ -13,7 +15,9 @@ import { DepartmentDetailComponent } from './department-detail/department-detail
     AppComponent,
     routingComponents,
     PageNotFoundComponent,
-    DepartmentDetailComponent
+    DepartmentDetailComponent,
+    DepartmentContactComponent,
+    DepartmentOverviewComponent
   ],
   imports: [
     BrowserModule,
