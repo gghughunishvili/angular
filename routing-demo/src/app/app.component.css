@@ -1,0 +1,9 @@
+a.active {
+    color: teal;
+}
+
+a {
+    display: inline-block;
+    padding: 5px;
+    border: 1px;
+}
