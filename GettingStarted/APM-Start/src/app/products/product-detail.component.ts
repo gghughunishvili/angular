@@ -20,6 +20,7 @@ export class ProductDetailComponent implements OnInit {
 
   ngOnInit() {
     let id = +this._route.snapshot.paramMap.get('id');
+    this.getProduct(id);
   }
 
   onBackClick(): void {
