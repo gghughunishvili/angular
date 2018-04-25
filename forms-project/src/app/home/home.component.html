@@ -15,19 +15,19 @@
     </div>
     <div class="form-group">
       <label>
-        <input type="checkbox" name="is-full-time" ngModel> Full time employee
+        <input type="checkbox" name="isFulltime" [(ngModel)]="employee.isFulltime"> Full time employee
       </label>
     </div>
     <label>Payment Type</label>
     <div class="radio">
       <label>
-        <input type="radio" name="pay-type" value="w2" ngModel checked>
+        <input type="radio" name="paymentType" [(ngModel)]="employee.paymentType" value="w2" ngModel checked>
         W2
       </label>
     </div>
     <div class="radio">
       <label>
-        <input type="radio" name="pay-type" value="1099" ngModel>
+        <input type="radio" name="paymentType" [(ngModel)]="employee.paymentType" value="1099" ngModel>
         1099
       </label>
     </div>
