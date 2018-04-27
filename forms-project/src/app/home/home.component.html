@@ -2,15 +2,16 @@
   <h3>Angular Forms</h3>
   <hr>
   <form #form="ngForm" novalidate>
-    <div class="form-group" [class.has-error]="firstname.invalid && firstname.dirty">
+    <div class="form-group" [class.has-error]="firstname.invalid && firstname.touched">
         <label class="control-label" for="firstname">First Name</label>
         <input type="text" name="firstname" id="firstname" class="form-control" 
           required
+          pattern="...+"
           [ngModel]="employee.firstname"
           (ngModelChange)="firstNameToUpperCase($event)"
           #firstname="ngModel">
-          <div *ngIf="firstname.invalid && firstname.dirty" class="alert alert-danger">
-            Firstname is Required!
+          <div *ngIf="firstname.invalid && firstname.touched" class="alert alert-danger">
+            Firstname is required and should be at least 3 characters
           </div>
     </div>
 
