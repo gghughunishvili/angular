@@ -45,7 +45,9 @@
     <div class="form-group" [class.has-error]="hasPrimaryLanguageError">
       <label>Primary Language</label>
       <select name="primaryLanguage" 
-        (blur)="validatePrimaryLanguage($event)"
+        #primaryLanguage
+        (blur)="validatePrimaryLanguage(primaryLanguage.value)"
+        (change)="validatePrimaryLanguage(primaryLanguage.value)"
         class="form-control" 
         [(ngModel)]="employee.primaryLanguage">
         <option value="default">Select a language...</option>

@@ -24,8 +24,8 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  validatePrimaryLanguage(event) {
-    this.hasPrimaryLanguageError = this.employee.primaryLanguage === 'default';
+  validatePrimaryLanguage(value) {
+    this.hasPrimaryLanguageError = value === 'default';
   }
 
 }
