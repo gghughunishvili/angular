@@ -3,8 +3,8 @@
   <hr>
   <form #form="ngForm" novalidate>
     <div class="form-group" [class.has-error]="firstname.invalid && firstname.dirty">
-        <label for="firstname">First Name</label>
-        <input type="text" name="firstname" id="firstname" 
+        <label class="control-label" for="firstname">First Name</label>
+        <input type="text" name="firstname" id="firstname" class="form-control" 
           required
           [ngModel]="employee.firstname"
           (ngModelChange)="firstNameToUpperCase($event)"

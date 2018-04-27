@@ -9,7 +9,7 @@ import { Employee } from '../models/employee.model';
 export class HomeComponent implements OnInit {
 
   langs = ['English', 'Spanish', 'Georgian', 'Other'];
-  employee = new Employee('Emma', 'Watson', false, 'w2', 'Georgian');
+  employee = new Employee('', 'Watson', false, 'w2', 'Georgian');
   constructor() { }
 
   ngOnInit() {
