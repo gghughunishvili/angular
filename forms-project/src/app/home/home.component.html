@@ -1,4 +1,5 @@
-<div class="container">
+<div class="container" *ngIf="langs.length == 0">Loading....</div>
+<div class="container" *ngIf="langs.length > 0">
   <h3>Angular Forms</h3>
   <hr>
   <form #form="ngForm" (submit)="submitForm(form)" novalidate>

@@ -10,13 +10,19 @@ import { NgForm } from '@angular/forms';
 })
 export class HomeComponent implements OnInit {
 
-  langs = ['English', 'Spanish', 'Georgian', 'Other'];
+  langs = [];
   employee = new Employee('', '', false, 'w2', 'default');
   hasPrimaryLanguageError = false;
   
-  constructor(private formPost: FormPost) { }
+  constructor(private formPost: FormPost) {
+    this.formPost.getLanguages().subscribe(
+      data => this.langs = data.languages,
+      err => console.log(err)
+    );
+  }
 
   ngOnInit() {
+    
   }
 
   firstNameToUpperCase(value: string) {
@@ -37,7 +43,11 @@ export class HomeComponent implements OnInit {
     if (this.hasPrimaryLanguageError)
       return;
       
-    this.formPost.postEmployee(this.employee);
+    this.formPost.postEmployee(this.employee)
+      .subscribe(
+        data => console.log(data),
+        err => console.log(err)
+      );
   }
 
 }
