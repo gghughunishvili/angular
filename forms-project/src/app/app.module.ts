@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { FormPost } from './services/form-post.service';
 
 
 @NgModule({
@@ -18,7 +19,7 @@ import { HomeComponent } from './home/home.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [FormPost],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
